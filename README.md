@@ -1,2 +1,2 @@
 # NAS
-A simple implementation of Neural Architecture Search.
+This repository implements Neural Architecture Search with Reinforcement Learning.
