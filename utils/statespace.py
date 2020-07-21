@@ -98,12 +98,13 @@ class StateSpace:
 
         return value
 
-    def get_random_state_space(self, num_layers):
+    def get_random_state_space(self, size, num_layers):
         """
         This function generates a random initial state space. 
         This can be fed as an initial value to the Controller.
 
         params:
+            - size (int) : size of the state space.
             - num_layers (int): number of layers to duplicate the search space.
         returns:
             - states (list) : A list of one hot encoded states
@@ -111,7 +112,7 @@ class StateSpace:
         # list to hold states
         states = []
 
-        for state_id in range(self.size * num_layers):
+        for state_id in range(size * num_layers):
             # retreive state metadata using id.
             state = self.states(state_id)
             size = state['size']
